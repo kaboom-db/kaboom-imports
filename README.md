@@ -2,9 +2,11 @@
 
 Python scripts that can import comics/cartoons from external services such as TMDb and ComicVine.
 
-## Requirements
+## Setup
 
 Before running any of the scripts make sure to run `pip install -r requirements/[service]_requirements.txt` depending on what service you are importing from.
+
+Enter your API credentials into `var.example.py`. Rename it to `var.py` and move it to the `scripts` directory.
 
 ## Notes
 
