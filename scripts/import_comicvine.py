@@ -8,8 +8,8 @@ from simyan.session import Session
 
 comicvine = Session(var.COMICVINE_API_KEY)
 access_token = var.ACCESS_TOKEN
-comics_api_url = 'http://127.0.0.1:8000/v1/comics/series/'
-issues_api_url = 'http://127.0.0.1:8000/v1/comics/issues/'
+comics_api_url = var.KABOOM_BASE_URL + '/v1/comics/series/'
+issues_api_url = var.KABOOM_BASE_URL + '/v1/comics/issues/'
 headers = {'content-type': 'application/json', 'Authorization': 'Token ' + access_token}
 statuses = ['COMPLETED', 'RELEASING', 'PLANNED', 'CANCELLED']
 

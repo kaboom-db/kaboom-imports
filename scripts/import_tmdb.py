@@ -10,8 +10,8 @@ from tmdbv3api import TMDb, TV, Season
 tmdb = TMDb()
 tmdb.api_key = var.TMDB_API_KEY
 access_token = var.ACCESS_TOKEN
-cartoons_api_url = 'http://127.0.0.1:8000/v1/cartoons/series/'
-episodes_api_url = 'http://127.0.0.1:8000/v1/cartoons/episodes/'
+cartoons_api_url = var.KABOOM_BASE_URL + '/v1/cartoons/series/'
+episodes_api_url = var.KABOOM_BASE_URL + '/v1/cartoons/episodes/'
 headers = {'content-type': 'application/json', 'Authorization': 'Token ' + access_token}
 
 tmdb_id = int(input('What is the ID of the TV show you want to import? '))
