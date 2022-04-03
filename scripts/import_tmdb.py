@@ -38,7 +38,7 @@ cartoon_data = {
 }
 
 # Check if the cartoon exists
-search = requests.get(cartoons_api_url + '?query=' + cartoon.name, headers=headers)
+search = requests.get(cartoons_api_url + '?tmdb_id=' + cartoon.id, headers=headers)
 results = search.json()['results']
 res_data = {}
 if not results:
@@ -49,6 +49,7 @@ if not results:
 else:
     res_data = results[0]
     print(res_data)
+    print("This cartoon already exists in the database... attempting import of episodes...")
 
 # Get the seasons 
 for i in range(0, cartoon.number_of_seasons):
